@@ -1,7 +1,7 @@
-#ifdef STRUCT_H_INCLUDED
+#ifndef STRUCT_H_INCLUDED
 #define STRUCT_H_INCLUDED
-#include "struct.h"
 
-med StructureCreate(unsigned long int);
-void Display(unsigned long int);
+
+Data* StructureCreate(unsigned long int);
+void Display(Data* meddes, unsigned long int);
 #endif

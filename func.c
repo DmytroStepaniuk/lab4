@@ -1,37 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "prototype.h"
+#include "struct.h"
 
-#define STRUCT_H_INCLUDED
-
-med StructureCreate(unsigned long int count){
-    int *med;
-    med = (int*)malloc(count*sizeof(int));
+Data* StructureCreate(unsigned long int count){
+    Data* meddes;
+    meddes = malloc(count* sizeof(Data));
     int i;
     for(i = 0; i<count; i++){
         printf("Enter the name of the patient №%i:", i);
-        scanf("%29s", data[i].name);
+        scanf("%29s", meddes[i].name);
         printf("Enter the medical card number:");
-        scanf("%ld", &data[i].medicalcard);
+        scanf("%ld", &meddes[i].medicalcard);
         printf("Enter the bloodgroup of patient:");
-        scanf("%i", &data[i].bloodg);
+        scanf("%i", &meddes[i].bloodgr);
         printf("Enter the illness:");
-        scanf("%29s", data[i].illness);
+        scanf("%29s", meddes[i].illness);
         printf("Point when the illness started:");
-        scanf("%9i",data[i].illbegin);
+        scanf("%9s",meddes[i].illbegin);
         }
-        return data[i];
+        return meddes;
 }
 
-void Display(unsigned long int count){
+void Display(Data* meddes, unsigned long int count){
     int i;
 
     printf("\t\n Structures\n");
     for(i = 0; i<count; i++){
-        printf("\nThe name of the patient is %s", data[i].name);
-        printf("\nThe medical card number is %ld", &data[i].medicalcard);
-        printf("\nThe bloodgroup is %i",data[i].bloodg);
-        printf("The illness is %s", data[i].illness);
-        printf("Illness started: %s", data[i].illbegin);
+        printf("\nThe name of the patient is %s", meddes[i].name);
+        printf("\nThe medical card number is %ld", &meddes[i].medicalcard);
+        printf("\nThe bloodgroup is %i",meddes[i].bloodgr);
+        printf("The illness is %s", meddes[i].illness);
+        printf("Illness started: %s", meddes[i].illbegin);
     }
 }
