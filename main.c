@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "struct.h"
-#include "prototype.h"
-
+// #include "./struct.h"
+#include "./prototype.h"
 
 int main()
 {
-    Data* med = NULL;
+    Data *med = NULL;
     unsigned long int count = 0;
     printf("Enter the number of medical cards:");
     scanf("%ld",&count);
@@ -17,7 +16,6 @@ int main()
         scanf("%i", &n);
     }
     while(n<1 || n>2);
-
 
     if(n==1){
         med = StructureCreate(count);
@@ -43,5 +41,6 @@ int main()
     else{
         printf("\nHave a good day!\n");
     }
+
     return (EXIT_SUCCESS);
 }
