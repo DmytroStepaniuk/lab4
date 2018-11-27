@@ -1,4 +1,5 @@
 #include "./func.c"
+#include "./struct.h"
 
 Data* StructureCreate(unsigned long int);
 void Display(Data* meddes, unsigned long int);
